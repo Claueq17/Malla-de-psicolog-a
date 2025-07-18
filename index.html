@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Curricular Psicología</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9fb;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .malla {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+    }
+
+    .ciclo {
+      flex: 0 0 250px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+
+    .ciclo h2 {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #555;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+
+    .curso {
+      background: #e6f0ff;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .curso.bloqueado {
+      background: #f2f2f2;
+      color: #aaa;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+
+    .curso.aprobado {
+      text-decoration: line-through;
+      background: #c0e6c3;
+      color: #333;
+    }
+
+    .curso:hover:not(.bloqueado) {
+      background: #d0e4ff;
+    }
+
+    .curso[title]::after {
+      content: attr(title);
+      position: absolute;
+      background: #333;
+      color: white;
+      pa
